@@ -1,0 +1,113 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "../../node_modules/@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+.c-sidebar .c-sidebar-nav-link {
+  border-top: 1px solid #213740 !important;
+  border-bottom: 1px solid #090e10 !important;
+  border-left: 3px solid transparent !important;
+
+  &:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14) !important;
+    border-left-color: $primary !important;
+  }
+
+  &.c-active {
+    border-left-color: $primary !important;
+  }
+}
+
+.c-sidebar-minimized {
+  .c-sidebar-user {
+    display: none !important;
+  }
+
+  .c-sidebar-nav-link {
+    border-top: 1px solid #213740 !important;
+    border-bottom: 1px solid #090e10 !important;
+    border-left: 3px solid transparent !important;
+
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14) !important;
+      border-left-color: $primary !important;
+    }
+
+    &.c-active {
+      border-left-color: $primary !important;
+    }
+  }
+}
+
+.c-sidebar-user {
+  border-top: 1px solid #213740 !important;
+  border-bottom: 1px solid #090e10 !important;
+  height: 80px;
+  overflow: hidden;
+
+  .user-panel {
+    width: 40px;
+    top: 0px;
+    right: 0;
+
+    a {
+      line-height: 40px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      border-left: 1px solid #213740 !important;
+      border-bottom: 1px solid #213740 !important;
+      // color: #fff;
+      font-weight: bold;
+      &:hover {
+        text-shadow: 1px 1px 2px $primary;
+      }
+    }
+  }
+}
+
+.c-sidebar-user .user-pic {
+  float: left;
+  width: 60px;
+  padding: 2px;
+  border-radius: 12px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.c-sidebar-user .user-pic img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.c-sidebar-user .user-info {
+  float: left;
+}
+
+.c-sidebar-user .user-info>span {
+  display: block;
+}
+
+.c-sidebar-user .user-info .user-role {
+  font-size: 12px;
+}
+
+.c-sidebar-user .user-info .user-status {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.c-sidebar-user .user-info .user-status i {
+  font-size: 8px;
+  margin-right: 4px;
+  color: #5cb85c;
+}
